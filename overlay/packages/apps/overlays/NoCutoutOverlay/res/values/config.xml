@@ -35,7 +35,7 @@
     <!-- Total height of QQS (quick_qs_offset_height + 128) -->
     <dimen name="quick_qs_total_height">176dp</dimen>
 
-    <!-- Whether to show battery percentage inside icon -->
-    <bool name="config_battery_percentage_show_inside_icon">false</bool>
+    <!-- Whether or not we should show the option to show battery percentage -->
+    <bool name="config_battery_percentage_setting_available">true</bool>
 
 </resources>
