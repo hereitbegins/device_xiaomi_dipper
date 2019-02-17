@@ -1,0 +1,2 @@
+add_lunch_combo aosp_dipper-userdebug
+add_lunch_combo aosp_dipper-eng
