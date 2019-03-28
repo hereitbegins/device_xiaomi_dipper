@@ -17,8 +17,9 @@ TARGET_SCREEN_WIDTH := 1080
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Playground
 PRODUCT_PACKAGES += \
-    NoCutoutOverlay
+  PlaygroundMod
 
 # Properties
 -include $(LOCAL_PATH)/device-props.mk
@@ -29,6 +30,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Inherit from sdm845-common
 $(call inherit-product, device/xiaomi/sdm845-common/sdm845.mk)
+
+# Device fstab
+PRODUCT_PACKAGES += \
+    fstab.qcom
 
 # Device init scripts
 PRODUCT_PACKAGES += \
@@ -57,3 +62,15 @@ PRODUCT_PACKAGES += \
     NQNfcNci \
     SecureElement \
     Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
+# PocketMode
+PRODUCT_PACKAGES += \
+    XiaomiPocketMode
+
+# Wallpapers
+PRODUCT_PACKAGES += \
+    WallpapersBReel2018
